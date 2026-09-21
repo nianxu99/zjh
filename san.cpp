@@ -60,21 +60,3 @@ public:
             return "普通三角形";
     }
 };
-int main()
-{
-    Triangle t1(3,4,5);
-
-    t1.show();
-    cout << "是否合法" << (t1.isLegal()?"是":"否") << endl;
-    cout << "周长" << t1.getPerimeter() << endl;
-    cout << "面积" << t1.getArea() << endl;
-    cout << "类型" << t1.getType() << endl;
-
-    cout << endl;
-    t1.setSide(5,5,5);
-    t1.show();
-    cout << "周长" << t1.getPerimeter() << endl;
-    cout << "面积" << t1.getArea() << endl;
-    cout << "类型" << t1.getType() << endl;
-    return 0;
-}
