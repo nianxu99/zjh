@@ -106,4 +106,22 @@ public:
         return "[梯形]上底= " + to_string(a) + ", 下底= " + to_string(b) + ", 高= " + to_string(h);
     }
 };
+class Ellipse : public Shape {
+private:
+    double a, b;
+public:
+    Ellipse(double a, double b) {
+        this->a = a;
+        this->b = b;
+    }
+    double getArea() override {
+        return 3.14 * a * b;
+    }
+    double getPerimeter() override {
+        return 3.14 * (3 * (a + b) - sqrt((3 * a + b) * (a + 3 * b)));
+    }
+    string getQuesStr() override {
+        return "[椭圆]长半轴= " + to_string(a) + ", 短半轴= " + to_string(b);
+    }
+};
 #endif

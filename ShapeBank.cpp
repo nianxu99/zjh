@@ -90,6 +90,12 @@ public:
                 s = new Trapezoid(a1, b1, h);
                 break;
             }
+            case 5: {
+                double a = rand() % 10 + 1;
+                double b = rand() % 10 + 1;
+                s = new Ellipse(a, b);
+                break;
+            }
         }
         Question* q = new Question(s);// 创建题目对象并加入题目列表
         questions.push_back(q);
@@ -115,7 +121,7 @@ public:
     }
 };
 int  main(){
-    SetConsoleOutputCP(65001); // 设置控制台输出为UTF-8编码
+    SetConsoleOutputCP(65001); 
     srand(time(0));
     ShapeBank bank;
     int num;
